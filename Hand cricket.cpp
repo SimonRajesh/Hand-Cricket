@@ -74,7 +74,7 @@ int bowling(int overs, int wickets, int first, int target, char team[50]) {
         cout << "----> ";
         cin >> ball;
         if (ball == 123) {
-            cout << "Thank you for playing!" << endl;
+            cout << "\nThank you for playing!" << endl;
             return 0;
         }
         if (ball != run && ball >= 0 && ball <= 6) {
@@ -133,16 +133,16 @@ int main() {
     cin >> overs;
     cout << "\n\"WICKETS\" : ";
     cin >> wickets;
-    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
     cout << "OPPONENT TEAM : BOT THUNDERS" << endl;
     cout << "Player Name : ×BOT× " << endl;
-    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << endl;
+    cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << endl;
     cout << "\t\t\t- TOSS -\t\t\n" << endl;
     cout << " Head (H)  |  Tail (T) " << endl;
     cin >> tossWish;
 
     if (tossWish == toss || tossWish - 32 == toss) {
-        cout << "You won the toss" << endl;
+        cout << "\nYou won the toss" << endl;
         cout << "-----------------------------------------------\n" << endl;
         cout << " BAT (B)  |   BOWL (b) " << endl;
         cin >> wishPlay;
@@ -165,14 +165,14 @@ int main() {
     }
     else {
         oppToss = rand() % 2;
-        cout << "\"Opponent won the toss\"" << endl;
+        cout << "\n\"Opponent won the toss\"" << endl;
         if (oppToss == 0) {
-            cout << "\n-----Opponent chose to bat first-----" << endl;
+            cout << "\n---------Opponent chose to bat first---------" << endl;
             cout << "-----------------------------------------------\n" << endl;
             bowling(overs, wickets, first, target, team);
         }
         else if (oppToss == 1) {
-            cout << "\n-----Opponent chose to bowl first-----" << endl;
+            cout << "\n--------Opponent chose to bowl first--------" << endl;
             cout << "-----------------------------------------------\n" << endl;
             batting(overs, wickets, first, target, team);
         }
